@@ -57,7 +57,7 @@ export function Header() {
                 Department
               </Link>
               <Link to="/doctors" className="text-gray-700 hover:text-[#0077B6] font-medium transition">
-                Know your doctor
+                Doctors
               </Link>
               <Link to="/services" className="text-gray-700 hover:text-[#0077B6] font-medium transition">
                 Services

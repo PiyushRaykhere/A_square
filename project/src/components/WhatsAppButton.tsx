@@ -7,13 +7,13 @@ export const WhatsAppButton: React.FC = () => {
   const phoneNumber: string = "917312345678";
 
   const services: string[] = [
-    "Depression Therapy",
-    "Anxiety Treatment",
-    "Trauma & PTSD",
-    "Relationship Counseling",
-    "Individual Therapy",
+    "Obstetrics & Gynaecology",
+    "Surgery",
+    "Orthopedics",
+    "Pediatrics",
+    "Anesthesia",
   ];
-
+``
   const handleWhatsAppRedirect = (service: string): void => {
     const message = `Hi! I'm interested in ${service} services. Could you please provide more information about your approach and availability?`;
 

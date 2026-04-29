@@ -1,7 +1,7 @@
 const departments = [
   {
     name: 'Obstetrics & Gynaecology',
-    image: 'https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://png.pngtree.com/thumb_back/fh260/background/20251207/pngtree-medical-ultrasound-machines-with-fetal-images-on-screen-technology-equipment-image_20766118.webp',
     content: 'Our Obstetrics & Gynaecology department is led by experienced specialists dedicated to women\'s health at every stage of life. We provide comprehensive maternity care from pre-natal consultations through safe delivery and post-natal recovery. Our unit is equipped with a fully functional labour room, NICU support, and advanced fetal monitoring systems. We manage high-risk pregnancies with utmost care and clinical precision. Gynaecological concerns including PCOS, endometriosis, and menstrual disorders are handled with sensitivity and modern treatment protocols. We are committed to ensuring safe motherhood and healthy outcomes for both mother and child.',
   },
   {
@@ -33,7 +33,7 @@ const departments = [
 
 export function DepartmentsPage() {
   return (
-    <div className="pt-28 pb-20 bg-white">
+    <div className="pt-36 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Our Specialities</span>
@@ -55,7 +55,7 @@ export function DepartmentsPage() {
                 <img
                   src={dept.image}
                   alt={dept.name}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[370px] object-fit  hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="w-full md:w-1/2">

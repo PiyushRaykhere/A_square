@@ -35,7 +35,7 @@ const services = [
 
 export function ServicesPage() {
   return (
-    <div className="pt-28 pb-20 bg-gray-50">
+    <div className="pt-36 pb-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">What We Offer</span>
@@ -57,7 +57,7 @@ export function ServicesPage() {
                 <img
                   src={service.image}
                   alt={service.name}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[370px] object-fit hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="w-full md:w-1/2">

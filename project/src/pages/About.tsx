@@ -1,3 +1,5 @@
+import hospital from '../assets/hospital.jpeg'
+
 const coreValues = [
   { icon: '🏥', title: 'Patient First', description: 'Every decision we make centers on the well-being, dignity, and safety of our patients.' },
   { icon: '🔬', title: 'Clinical Excellence', description: 'We uphold the highest standards of medical practice through continuous learning and innovation.' },
@@ -9,7 +11,7 @@ const coreValues = [
 
 export function About() {
   return (
-    <div className="pt-28 pb-20 bg-white">
+    <div className="pt-36 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Hero */}
@@ -26,9 +28,9 @@ export function About() {
           </div>
           <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl">
             <img
-              src="https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={hospital}
               alt="A Square Hospital"
-              className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-110 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
