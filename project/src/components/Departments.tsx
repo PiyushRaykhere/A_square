@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { departmentsData } from '../data/staticData';
 import { Heart, Bone, Brain, Baby, Smile, Stethoscope, Ear, Sparkles } from 'lucide-react';
-import { supabase, Department } from '../lib/supabase';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Heart,
@@ -14,39 +13,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export function Departments() {
-  const [departments, setDepartments] = useState<Department[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchDepartments();
-  }, []);
-
-  async function fetchDepartments() {
-    try {
-      const { data, error } = await supabase
-        .from('departments')
-        .select('*')
-        .eq('is_active', true)
-        .order('display_order', { ascending: true });
-
-      if (error) throw error;
-      setDepartments(data || []);
-    } catch (error) {
-      console.error('Error fetching departments:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  if (loading) {
-    return (
-      <section id="departments" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">Loading departments...</div>
-        </div>
-      </section>
-    );
-  }
+  const departments = departmentsData;
 
   return (
     <section id="departments" className="py-20 bg-white">

@@ -1,4 +1,6 @@
 import { Phone, Mail, MapPin, Heart } from 'lucide-react';
+import logo from '../assets/logo.jpg';
+
 
 export function Footer() {
   return (
@@ -24,22 +26,27 @@ export function Footer() {
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-[#00B894] transition">
+                <a href="/home" className="text-gray-400 hover:text-[#00B894] transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#departments" className="text-gray-400 hover:text-[#00B894] transition">
+                <a href="/about" className="text-gray-400 hover:text-[#00B894] transition">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/departments" className="text-gray-400 hover:text-[#00B894] transition">
                   Departments
                 </a>
               </li>
               <li>
-                <a href="#doctors" className="text-gray-400 hover:text-[#00B894] transition">
+                <a href="/doctors" className="text-gray-400 hover:text-[#00B894] transition">
                   Our Doctors
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-[#00B894] transition">
+                <a href="/services" className="text-gray-400 hover:text-[#00B894] transition">
                   Services
                 </a>
               </li>

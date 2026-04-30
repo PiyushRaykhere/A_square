@@ -44,11 +44,11 @@ export function WhyChooseUs() {
           <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
             Why Patients Trust{' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
-              ASquare Hospital
-            </span>
+              A Square
+            </span> {''}Hospital
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are committed to providing the highest quality healthcare with a patient-first approach
+            At A_Square Hospital, Jharsuguda, your health is our priority, and your trust is our greatest strength
           </p>
         </div>
 

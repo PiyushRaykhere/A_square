@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Calendar, Send } from 'lucide-react';
-import { supabase, Department, Doctor } from '../lib/supabase';
+import { departmentsData, doctorsData, Doctor } from '../data/staticData';
 
 export function AppointmentForm() {
-  const [departments, setDepartments] = useState<Department[]>([]);
-  const [doctors, setDoctors] = useState<Doctor[]>([]);
+  const departments = departmentsData;
+  const doctors = doctorsData;
   const [filteredDoctors, setFilteredDoctors] = useState<Doctor[]>([]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -21,11 +21,6 @@ export function AppointmentForm() {
   });
 
   useEffect(() => {
-    fetchDepartments();
-    fetchDoctors();
-  }, []);
-
-  useEffect(() => {
     if (formData.department_id) {
       const filtered = doctors.filter(d => d.department_id === formData.department_id);
       setFilteredDoctors(filtered);
@@ -37,39 +32,24 @@ export function AppointmentForm() {
     }
   }, [formData.department_id, doctors]);
 
-  async function fetchDepartments() {
-    const { data } = await supabase
-      .from('departments')
-      .select('*')
-      .eq('is_active', true)
-      .order('display_order', { ascending: true });
-    setDepartments(data || []);
-  }
-
-  async function fetchDoctors() {
-    const { data } = await supabase
-      .from('doctors')
-      .select('*')
-      .eq('is_available', true)
-      .order('name', { ascending: true });
-    setDoctors(data || []);
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const { error } = await supabase.from('appointments').insert([
-        {
-          ...formData,
-          status: 'pending',
-        },
-      ]);
+    const doctor = doctors.find(d => d.id === formData.doctor_id);
+    const dept = departments.find(d => d.id === formData.department_id);
+    
+    const phoneNumber = '917312345678';
+    const message = `Hello ASquare Hospital,\n\nI would like to book an appointment:\n👨‍⚕️ *Doctor:* ${doctor?.name || ''}\n🏥 *Department:* ${dept?.name || ''}\n📅 *Date:* ${formData.appointment_date}\n⏰ *Time:* ${formData.appointment_time}\n\n*Patient Details:* \n👤 *Name:* ${formData.patient_name}\n📱 *Phone:* ${formData.patient_phone}\n✉️ *Email:* ${formData.patient_email}\n📝 *Reason:* ${formData.reason || 'N/A'}\n\nPlease confirm my booking.`;
 
-      if (error) throw error;
-
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Simulate loading for better UX before redirecting
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+      setLoading(false);
       setSuccess(true);
+      
       setFormData({
         patient_name: '',
         patient_email: '',
@@ -82,12 +62,7 @@ export function AppointmentForm() {
       });
 
       setTimeout(() => setSuccess(false), 5000);
-    } catch (error) {
-      console.error('Error booking appointment:', error);
-      alert('Failed to book appointment. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    }, 500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {

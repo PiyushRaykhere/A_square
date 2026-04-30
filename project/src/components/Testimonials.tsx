@@ -1,42 +1,8 @@
-import { useEffect, useState } from 'react';
 import { Star, Quote } from 'lucide-react';
-import { supabase, Testimonial } from '../lib/supabase';
+import { testimonialsData } from '../data/staticData';
 
 export function Testimonials() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchTestimonials();
-  }, []);
-
-  async function fetchTestimonials() {
-    try {
-      const { data, error } = await supabase
-        .from('testimonials')
-        .select('*')
-        .eq('is_approved', true)
-        .order('created_at', { ascending: false })
-        .limit(6);
-
-      if (error) throw error;
-      setTestimonials(data || []);
-    } catch (error) {
-      console.error('Error fetching testimonials:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  if (loading) {
-    return (
-      <section id="testimonials" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">Loading testimonials...</div>
-        </div>
-      </section>
-    );
-  }
+  const testimonials = testimonialsData;
 
   return (
     <section id="testimonials" className="py-20 bg-white">

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Clock, Menu, X } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,9 +33,10 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A²</span>
-              </div>
+              </div> */}
+              <img src={logo} alt="logo" className=' ml-4 w-28 h-20' />
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
                   ASquare

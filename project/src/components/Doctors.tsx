@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Award, Calendar, X, Send } from 'lucide-react';
-import { supabase, Doctor, Department } from '../lib/supabase';
+import { doctorsData, departmentsData, Doctor, Department } from '../data/staticData';
 
 const fallbackPhotos = [
   'https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -11,40 +12,23 @@ const fallbackPhotos = [
   'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400',
 ];
 
-export function Doctors() {
-  const [doctors, setDoctors] = useState<(Doctor & { department: Department | null })[]>([]);
-  const [loading, setLoading] = useState(true);
+interface DoctorsProps {
+  limit?: number;
+  showViewAll?: boolean;
+}
+
+export function Doctors({ limit, showViewAll }: DoctorsProps) {
+  const doctors = doctorsData.map(doc => ({
+    ...doc,
+    department: departmentsData.find(d => d.id === doc.department_id) || null
+  })).slice(0, limit || doctorsData.length);
+
   const [selectedDoctor, setSelectedDoctor] = useState<(Doctor & { department: Department | null }) | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     patientName: '',
     patientPhone: '',
   });
-
-  useEffect(() => {
-    fetchDoctors();
-  }, []);
-
-  async function fetchDoctors() {
-    try {
-      const { data, error } = await supabase
-        .from('doctors')
-        .select(`
-          *,
-          department:departments(*)
-        `)
-        .eq('is_available', true)
-        .order('display_order', { ascending: true })
-        .limit(6);
-
-      if (error) throw error;
-      setDoctors(data || []);
-    } catch (error) {
-      console.error('Error fetching doctors:', error);
-    } finally {
-      setLoading(false);
-    }
-  }
 
   const handleBookNow = (doctor: Doctor & { department: Department | null }) => {
     setSelectedDoctor(doctor);
@@ -63,16 +47,6 @@ export function Doctors() {
     setIsModalOpen(false);
     setFormData({ patientName: '', patientPhone: '' });
   };
-
-  if (loading) {
-    return (
-      <section id="doctors" className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">Loading doctors...</div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="doctors" className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
@@ -134,6 +108,17 @@ export function Doctors() {
             </div>
           ))}
         </div>
+
+        {showViewAll && doctorsData.length > (limit || 0) && (
+          <div className="mt-12 text-center">
+            <Link
+              to="/doctors"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-3 rounded-full hover:shadow-lg transition transform hover:scale-105 font-medium text-lg"
+            >
+              View All Doctors
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Booking Modal */}

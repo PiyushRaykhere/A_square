@@ -1,33 +1,47 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Calendar, Phone } from 'lucide-react';
 
+
+import hospital from '../assets/hospital.jpeg'
+import slider2 from '../assets/receptioncounter.png'
+import slider3 from '../assets/slider3.jpeg'
+import slider4 from '../assets/slider4.jpeg'
+
+
+
 const slides = [
   {
-    image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    title: 'Advanced Cardiac Care',
-    subtitle: 'State-of-the-art cardiology department with expert specialists',
+    image: hospital,
+    subtitle1: "Welcome to",
+    title: 'A Square Hospital',
+    subtitle: 'a trusted destination for quality healthcare',
   },
   {
-    image: 'https://images.pexels.com/photos/668298/pexels-photo-668298.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    title: 'Comprehensive Orthopedic Services',
-    subtitle: 'Joint replacement and advanced orthopedic treatments',
+    image: slider2,
+    title: 'Care from the First Hello',
+    subtitle: 'Patient-first service for a smooth and stress-free visit',
   },
   {
-    image: 'https://images.pexels.com/photos/3952048/pexels-photo-3952048.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: slider3,
     title: '24/7 Emergency Care',
     subtitle: 'Round-the-clock emergency services with expert medical team',
+  },
+  {
+    image: slider4,
+    title: 'Advanced Surgical Care',
+    subtitle: 'Equipped for Excellence in Every Procedure',
   },
 ];
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  //   }, 5000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -38,23 +52,25 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative pt-20 h-[600px] lg:h-[700px] overflow-hidden">
+    <section id="home" className="relative pt-20 h-[600px] lg:h-[750px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          className={`absolute mt-16 inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10" />
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-contain bg-gray-900"
+            className="w-full h-full object-fill bg-gray-900"
           />
           <div className="absolute inset-0 z-20 flex items-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="max-w-2xl">
+            <div className="max-w-7xl mx-auto px-18 sm:px-6 lg:px-8 w-full">
+              <div className="max-w-2xl ml-8">
+                <p className="text-xl sm:text-xl text-white/90 mb-2">
+                  {slide.subtitle1}
+                </p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                   {slide.title}
                 </h1>

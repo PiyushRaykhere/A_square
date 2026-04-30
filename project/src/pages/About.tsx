@@ -1,4 +1,5 @@
 import hospital from '../assets/hospital.jpeg'
+import doctor from '../assets/doctor_babita.png'
 
 const coreValues = [
   { icon: '🏥', title: 'Patient First', description: 'Every decision we make centers on the well-being, dignity, and safety of our patients.' },
@@ -18,12 +19,16 @@ export function About() {
         <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
           <div className="w-full md:w-1/2">
             <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-6 text-gray-800">
-              A Square <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Hospital</span>
+            <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
+              <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">A Square</span> Hospital
             </h1>
-            <div className="w-12 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-6" />
-            <p className="text-lg text-gray-600 leading-relaxed">
-              A Square Hospital is a leading multi-speciality hospital in Jharsuguda, providing advanced and compassionate healthcare services under one roof. We offer 24/7 emergency services, ICU and NICU care, modern modular operation theatres, Pharmacy and advanced diagnostic facilities. Our expert doctors specialize in Gynaecology, Maternity Care, Paediatrics, Orthopaedics, General Surgery, and General Medicine. With experienced medical staff, advanced technology, and patient-friendly care, A Square Hospital is recognized as one of the best hospitals in Jharsuguda for safe, reliable, and quality treatment.
+            <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-4" />
+            <p className="text-sm text-gray-600 leading-relaxed ">
+              Welcome to A Square Hospital, Jharsuguda, a trusted destination for quality healthcare, compassionate treatment, and advanced medical services. We are committed to delivering patient-centered care with modern facilities, experienced doctors, and a dedicated healthcare team.
+              At A Square Hospital, we believe that every patient deserves personalized attention, timely treatment, and complete support throughout their healthcare journey. Our hospital is equipped with modern medical technology and infrastructure to provide safe, efficient, and reliable care for patients of all ages.
+              We specialize in a wide range of healthcare services, including Gynecology & Obstetrics, Maternity Care, General Medicine, General Surgery, Orthopedics, Paediatrics, Advanced NICU, Fertility Care, Diagnostics, Emergency Care, and Preventive Health Services. Our focus is to ensure the highest standards of treatment while maintaining warmth, trust, and comfort for every patient.
+              Led by experienced medical professionals, A Square Hospital has earned the confidence of families in Jharsuguda and nearby areas through ethical practice, affordable healthcare, and excellent patient outcomes
+              .
             </p>
           </div>
           <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl">
@@ -34,6 +39,42 @@ export function About() {
             />
           </div>
         </div>
+
+        {/* director section */}
+        <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
+          <div className="w-full h-[400px] w-[350px] overflow-hidden rounded-2xl shadow-xl">
+            <img
+              src={doctor}
+              alt="A Square Hospital"
+              className="w-full h-full object-fit hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="w-full md:w-2/3">
+            <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Meet Our Founder & Director </span>
+            <h1 className="text-4xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
+              Dr. <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Babita Ramani</span>
+            </h1>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-4" />
+            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
+              <strong>Dr. Babita Ramani</strong> is the proud Founder & Director of A Square Hospital, Jharsuguda, and a renowned name in women’s healthcare. She is a highly experienced Senior Obstetrician & Gynecologist with more than 15 years of dedicated service in the medical field.
+            </p>
+            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
+              She holds an MD in Obstetrics & Gynecology (O&G), FICOG, and has completed an IVF Fellowship from KIEL, Germany. She also served as Ex-Senior Resident at VIMSAR, Burla, gaining valuable clinical expertise in advanced patient care.
+              Dr. Babita Ramani is a skilled Laparoscopic Surgeon, Ultrasonologist, and Fertility Expert, known for offering modern, compassionate, and personalized treatment to women at every stage of life. Her patient-friendly approach, clinical excellence, and commitment to quality healthcare have earned the trust and respect of countless families.
+            </p>
+            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
+              Beyond her medical profession, Dr. Babita Ramani is also a well-known social worker, actively involved in community welfare, women’s health awareness, and social development initiatives.
+
+            </p>
+            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
+              Under her visionary leadership, A Square Hospital continues to provide trusted, affordable, and advanced healthcare services with the mission of improving lives and ensuring better health for every family.
+
+            </p>
+
+          </div>
+
+        </div>
+
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">

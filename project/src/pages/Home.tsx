@@ -17,7 +17,7 @@ export function Home() {
       <QuickAccess />
       <Statistics />
       <Departments />
-      <Doctors />
+      <Doctors limit={3} showViewAll={true} />
       <WhyChooseUs />
       <HealthPackages />
       <Services />
