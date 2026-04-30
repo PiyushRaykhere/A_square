@@ -82,14 +82,14 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-[#00B894] flex-shrink-0 mt-1" />
                 <div className="text-gray-400 text-sm">
-                  <div>Emergency: +91 731-2345-678</div>
-                  <div>Appointments: +91 731-2345-679</div>
+                  <div>Emergency: +91 9827973991</div>
+                  <div>Appointments: +91 9827973991</div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[#00B894] flex-shrink-0 mt-1" />
                 <a href="mailto:info@asquarehospital.in" className="text-gray-400 text-sm hover:text-[#00B894] transition">
-                  info@asquarehospital.in
+                  Asquarehospital@gmail.com
                 </a>
               </li>
             </ul>
