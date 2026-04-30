@@ -133,7 +133,7 @@ export function Specialties() {
             
             {/* Main Text */} 
             <p className="text-xl md:text-3xl font-medium leading-relaxed text-gray-700">
-               At A Square Hospital, we continue to grow with one promise —  
+               A Square Hospital continue to grow with one promise —  
                <br className="hidden md:block" />
                <span className="font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent px-2"> "Compassionate Care for Every Life"</span>. 
             </p>
