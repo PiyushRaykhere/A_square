@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Check } from 'lucide-react';
 
 const packages = [
@@ -54,13 +55,19 @@ const packages = [
 ];
 
 export function HealthPackages() {
+  const defaultIndex = packages.findIndex(p => p.popular);
+  const [activeIndex, setActiveIndex] = useState(defaultIndex);
+
   return (
     <section id="health-packages" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Heading */}
         <div className="text-center mb-16">
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Health Packages
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
             Affordable{' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
@@ -68,21 +75,29 @@ export function HealthPackages() {
             </span>{' '}
             Packages
           </h2>
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Preventive healthcare packages designed for different age groups and health needs
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Cards */}
+        <div
+          className="grid md:grid-cols-3 gap-8"
+          onMouseLeave={() => setActiveIndex(defaultIndex)}
+        >
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-2xl overflow-hidden ${
-                pkg.popular
-                  ? 'ring-4 ring-[#0077B6] shadow-2xl scale-105'
-                  : 'border-2 border-gray-200 shadow-lg'
-              } transition-all duration-300 hover:shadow-2xl`}
+              onMouseEnter={() => setActiveIndex(index)}
+              className={`relative bg-white rounded-2xl overflow-hidden transition-all duration-300 ease-in-out
+              ${
+                activeIndex === index
+                  ? 'ring-4 ring-[#0077B6] ring-offset-2 ring-offset-white'
+                  : 'border-2 border-gray-200'
+              }`}
             >
+              {/* Popular Tag */}
               {pkg.popular && (
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-4 py-1 text-sm font-bold">
                   MOST POPULAR
@@ -90,12 +105,15 @@ export function HealthPackages() {
               )}
 
               <div className="p-8">
+                
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
                   {pkg.name}
                 </h3>
+
                 <p className="text-gray-600 mb-6">
                   {pkg.description}
                 </p>
+
                 <div className="mb-6">
                   <span className="text-5xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
                     {pkg.price}
@@ -117,7 +135,7 @@ export function HealthPackages() {
                   href="#appointment"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition ${
                     pkg.popular
-                      ? 'bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white hover:shadow-xl'
+                      ? 'bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white hover:shadow-lg'
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                   }`}
                 >
@@ -127,6 +145,7 @@ export function HealthPackages() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
