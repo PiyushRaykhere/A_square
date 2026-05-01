@@ -29,13 +29,7 @@ const quickLinks = [
     href: '#health-packages',
     color: 'from-orange-500 to-orange-600',
   },
-  {
-    icon: Clipboard,
-    title: 'Lab Reports',
-    description: 'Access your reports',
-    href: '#contact',
-    color: 'from-purple-500 to-purple-600',
-  },
+  
   {
     icon: Heart,
     title: 'Emergency',
