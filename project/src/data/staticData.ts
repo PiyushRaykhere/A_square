@@ -118,93 +118,75 @@ export const departmentsData: Department[] = [
     display_order: 8,
     is_active: true,
     created_at: new Date().toISOString()
+  },
+  {
+    id: 'dept-gynec',
+    name: 'Gynecology & Obstetrics',
+    slug: 'gynecology-obstetrics',
+    description: "Comprehensive women's health, maternity, and fertility services.",
+    icon: 'Heart',
+    display_order: 9,
+    is_active: true,
+    created_at: new Date().toISOString()
   }
 ];
 
-export const doctorsData: Doctor[] = [
+export type DoctorExtended = Doctor & {
+  bio_full?: string;
+  designation?: string;
+};
+
+export const doctorsData: DoctorExtended[] = [
   {
     id: 'doc-1',
-    name: 'Dr. Sarah Johnson',
-    slug: 'sarah-johnson',
-    department_id: 'dept-1',
-    qualification: 'MD, DM (Cardiology)',
+    name: 'Dr. Babita Ramani',
+    slug: 'babita-ramani',
+    department_id: 'dept-gynec',
+    qualification: 'MD (O&G), FICOG, IVF Fellowship (KIEL, Germany)',
     experience_years: 15,
-    specialization: ['Interventional Cardiology', 'Heart Failure'],
-    consultation_fee: 1000,
+    specialization: ['Gynecology & Obstetrics', 'Laparoscopic Surgery', 'Fertility & IVF', 'Ultrasonology'],
+    consultation_fee: 500,
     is_available: true,
     display_order: 1,
     created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=400'
+    image_url: '/src/assets/DR_B_Ramani.jpg',
+    designation: 'Founder & Director',
+    bio: 'Senior Obstetrician & Gynecologist with 15+ years of experience.',
+    bio_full: 'Dr. Babita Ramani is the Founder & Director of A Square Hospital, Jharsuguda, and a renowned Senior Obstetrician & Gynecologist with over 15 years of dedicated medical service. She holds an MD in Obstetrics & Gynecology, FICOG, and has completed an IVF Fellowship from KIEL, Germany. She served as Ex-Senior Resident at VIMSAR, Burla. Dr. Ramani is a skilled Laparoscopic Surgeon, Ultrasonologist, and Fertility Expert known for compassionate, personalized women\'s healthcare. Beyond her practice, she is an active social worker involved in community welfare and women\'s health awareness.'
   },
   {
     id: 'doc-2',
-    name: 'Dr. Michael Chen',
-    slug: 'michael-chen',
-    department_id: 'dept-3',
-    qualification: 'MD, DM (Neurology)',
-    experience_years: 12,
-    specialization: ['Stroke Medicine', 'Epilepsy'],
-    consultation_fee: 1200,
+    name: 'Dr. Diptimayee Arland',
+    slug: 'diptimayee-arland',
+    department_id: 'dept-gynec',
+    qualification: 'MBBS, MS (O&G)',
+    experience_years: 8,
+    specialization: ['Obstetrics & Gynecology', 'High-Risk Pregnancy', 'Maternity Care', 'Women\'s Health'],
+    consultation_fee: 400,
     is_available: true,
     display_order: 2,
     created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400'
+    image_url: '/src/assets/DR_D_Arland.jpg',
+    designation: 'Consultant Gynecologist',
+    bio: 'Specialist in Obstetrics & Gynecology with expertise in high-risk pregnancy care.',
+    bio_full: 'Dr. Diptimayee Arland is a qualified Obstetrician and Gynecologist with an MBBS and MS in O&G. With 8 years of clinical experience, she specializes in managing high-risk pregnancies, providing comprehensive antenatal care, and ensuring safe deliveries for mothers and newborns. She is known for her patient-friendly approach and dedication to women\'s health at every stage of life. Dr. Arland is committed to delivering compassionate and evidence-based care to every patient she treats.'
   },
   {
     id: 'doc-3',
-    name: 'Dr. Emily Williams',
-    slug: 'emily-williams',
-    department_id: 'dept-4',
-    qualification: 'MD (Pediatrics)',
+    name: 'Dr. Ranjit Arland',
+    slug: 'ranjit-arland',
+    department_id: 'dept-6',
+    qualification: 'MBBS, MS (General Surgery)',
     experience_years: 10,
-    specialization: ['Neonatology', 'Pediatric Intensive Care'],
-    consultation_fee: 800,
+    specialization: ['General Surgery', 'Laparoscopic Surgery', 'Emergency Surgery', 'Trauma Care'],
+    consultation_fee: 400,
     is_available: true,
     display_order: 3,
     created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: 'doc-4',
-    name: 'Dr. James Anderson',
-    slug: 'james-anderson',
-    department_id: 'dept-2',
-    qualification: 'MS (Orthopedics)',
-    experience_years: 18,
-    specialization: ['Joint Replacement', 'Sports Medicine'],
-    consultation_fee: 1500,
-    is_available: true,
-    display_order: 4,
-    created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: 'doc-5',
-    name: 'Dr. Lisa Kumar',
-    slug: 'lisa-kumar',
-    department_id: 'dept-8',
-    qualification: 'MD (Dermatology)',
-    experience_years: 8,
-    specialization: ['Cosmetic Dermatology', 'Dermatosurgery'],
-    consultation_fee: 900,
-    is_available: true,
-    display_order: 5,
-    created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: 'doc-6',
-    name: 'Dr. Robert Taylor',
-    slug: 'robert-taylor',
-    department_id: 'dept-6',
-    qualification: 'MD (General Medicine)',
-    experience_years: 20,
-    specialization: ['Internal Medicine', 'Preventive Care'],
-    consultation_fee: 700,
-    is_available: true,
-    display_order: 6,
-    created_at: new Date().toISOString(),
-    image_url: 'https://images.pexels.com/photos/5214949/pexels-photo-5214949.jpeg?auto=compress&cs=tinysrgb&w=400'
+    image_url: '/src/assets/DR_R_Arland.jpg',
+    designation: 'Consultant Surgeon',
+    bio: 'General & Laparoscopic Surgeon with 10+ years of surgical expertise.',
+    bio_full: 'Dr. Ranjit Arland is a skilled General and Laparoscopic Surgeon with an MBBS and MS in General Surgery, bringing over 10 years of surgical expertise to A Square Hospital. He specializes in both elective and emergency surgical procedures, including laparoscopic cholecystectomy, hernia repair, appendectomy, and trauma management. Known for his precision, calm approach, and thorough post-operative care, Dr. Arland is dedicated to ensuring the safety and swift recovery of every patient under his care.'
   }
 ];
 
