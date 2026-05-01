@@ -41,38 +41,37 @@ export function About() {
         </div>
 
         {/* director section */}
-        <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
-          <div className="w-full h-[400px] w-[350px] overflow-hidden rounded-2xl shadow-xl">
-            <img
-              src={doctor}
-              alt="A Square Hospital"
-              className="w-full h-full object-fit hover:scale-105 transition-transform duration-500"
-            />
+        <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
+          <div className="w-full md:w-[320px] flex-shrink-0">
+            <div className="overflow-hidden rounded-2xl shadow-xl bg-gray-100">
+              <img
+                src={doctor}
+                alt="Dr. Babita Ramani"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
-          <div className="w-full md:w-2/3">
-            <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Meet Our Founder & Director </span>
-            <h1 className="text-4xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
+          <div className="flex-1 min-w-0">
+            <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Meet Our Founder & Director</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
               Dr. <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Babita Ramani</span>
-            </h1>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-4" />
-            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
-              <strong>Dr. Babita Ramani</strong> is the proud Founder & Director of A Square Hospital, Jharsuguda, and a renowned name in women’s healthcare. She is a highly experienced Senior Obstetrician & Gynecologist with more than 15 years of dedicated service in the medical field.
-            </p>
-            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
-              She holds an MD in Obstetrics & Gynecology (O&G), FICOG, and has completed an IVF Fellowship from KIEL, Germany. She also served as Ex-Senior Resident at VIMSAR, Burla, gaining valuable clinical expertise in advanced patient care.
-              Dr. Babita Ramani is a skilled Laparoscopic Surgeon, Ultrasonologist, and Fertility Expert, known for offering modern, compassionate, and personalized treatment to women at every stage of life. Her patient-friendly approach, clinical excellence, and commitment to quality healthcare have earned the trust and respect of countless families.
-            </p>
-            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
-              Beyond her medical profession, Dr. Babita Ramani is also a well-known social worker, actively involved in community welfare, women’s health awareness, and social development initiatives.
-
-            </p>
-            <p className="text-sm text-gray-600 text-justify  leading-relaxed">
-              Under her visionary leadership, A Square Hospital continues to provide trusted, affordable, and advanced healthcare services with the mission of improving lives and ensuring better health for every family.
-
-            </p>
-
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-5" />
+            <div className="flex flex-col gap-4">
+              <p className="text-sm text-gray-600 leading-relaxed">
+                <strong>Dr. Babita Ramani</strong> is the proud Founder & Director of A Square Hospital, Jharsuguda, and a renowned name in women’s healthcare. She is a highly experienced Senior Obstetrician & Gynecologist with more than 15 years of dedicated service in the medical field.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                She holds an MD in Obstetrics & Gynecology (O&G), FICOG, and has completed an IVF Fellowship from KIEL, Germany. She also served as Ex-Senior Resident at VIMSAR, Burla, gaining valuable clinical expertise in advanced patient care. Dr. Babita Ramani is a skilled Laparoscopic Surgeon, Ultrasonologist, and Fertility Expert, known for offering modern, compassionate, and personalized treatment to women at every stage of life.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Beyond her medical profession, Dr. Babita Ramani is also a well-known social worker, actively involved in community welfare, women’s health awareness, and social development initiatives.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Under her visionary leadership, A Square Hospital continues to provide trusted, affordable, and advanced healthcare services with the mission of improving lives and ensuring better health for every family.
+              </p>
+            </div>
           </div>
-
         </div>
 
 
