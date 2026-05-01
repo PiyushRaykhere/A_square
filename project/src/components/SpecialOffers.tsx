@@ -77,7 +77,7 @@ export function SpecialOffers() {
         </div>
 
   <div className="mt-1 mb-18 flex justify-center px-4"> 
-        <div className="relative max-w-4xl w-full p-8 md:p-12 rounded-3xl bg-white border border-blue-50 shadow-[0_8px_50px_rgb(0,0,0,0.04)] overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,119,182,0.12)] hover:-translate-y-1"> 
+        <div className="relative max-w-4xl w-full p-8 md:p-12 rounded-3xl bg-white border border-blue-50 shadow-[0_9px_50px_rgb(0,0,0,0.04)] overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,119,182,0.12)] hover:-translate-y-1"> 
           {/* Background Glow Effect */} 
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out pointer-events-none">
             <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#0077B6]/15 rounded-full blur-3xl"></div> 
