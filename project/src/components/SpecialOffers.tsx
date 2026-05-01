@@ -89,9 +89,9 @@ export function SpecialOffers() {
             
             {/* Main Text */} 
             <p className="text-xl md:text-3xl font-medium leading-relaxed text-gray-700">
-               A Square Hospital continue to grow with one promise —  
+               At <span className="font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent px-2"> A Square Hospital, Jharsuguda,</span> we are dedicated to delivering trusted healthcare solutions for every stage of life  
                <br className="hidden md:block" />
-               <span className="font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent px-2"> "Compassionate Care for Every Life"</span>. 
+               
             </p>
             
             {/* Bottom Line */} 
