@@ -85,10 +85,7 @@ export function SpecialOffers() {
           </div> 
           
           <div className="relative z-10 text-center">
-            {/* Quote Icon */} 
-            <div className="text-6xl md:text-8xl font-serif text-[#0077B6]/20 leading-none h-10 md:h-16 mb-4 md:mb-2 select-none">
-              “
-            </div> 
+           
             
             {/* Main Text */} 
             <p className="text-xl md:text-3xl font-medium leading-relaxed text-gray-700">
