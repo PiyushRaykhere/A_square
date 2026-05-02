@@ -13,7 +13,7 @@ type Stat = {
 const stats: Stat[] = [
   { icon: Users, number: 50000, suffix: "+", label: "Happy Patients" },
   { icon: Award, number: 25, suffix: "+", label: "Expert Doctors" },
-  { icon: Building2, number: 15, suffix: "+", label: "Years of Service" },
+  { icon: Building2, number: 3, suffix: "+", label: "Years of Service" },
   { icon: HeartPulse, number: 8, suffix: "+", label: "Departments" },
 ];
 

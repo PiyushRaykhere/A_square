@@ -35,7 +35,7 @@ export function Doctors({ limit, showViewAll }: DoctorsProps) {
   const handleWhatsAppRedirect = (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedDoctor) return;
-    const phoneNumber = '917312345678';
+    const phoneNumber = '919827973991';
     const message = `Hello ASquare Hospital,\n\nI would like to book an appointment with:\n👨‍⚕️ *Doctor:* ${selectedDoctor.name}\n🏥 *Department:* ${selectedDoctor.department?.name || 'General'}\n\n*Patient Details:* \n👤 *Name:* ${formData.patientName}\n📱 *Phone:* ${formData.patientPhone}\n\nPlease confirm my booking.`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
     setIsBookingOpen(false);
@@ -67,7 +67,7 @@ export function Doctors({ limit, showViewAll }: DoctorsProps) {
                 <img
                   src={doctor.image_url}
                   alt={doctor.name}
-                  className="w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition duration-500"
+                  className="w-full h-full object-contain object-top opacity-90 group-hover:scale-105 transition duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-1.5 shadow-lg">
                   <div className="flex items-center gap-1.5">

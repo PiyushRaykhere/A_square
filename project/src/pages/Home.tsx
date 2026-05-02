@@ -22,7 +22,7 @@ export function Home() {
       <WhyChooseUs />
       <HealthPackages />
       <SpecialOffers />
-      <Services />
+      {/* <Services /> */}
       <AppointmentForm />
       <Testimonials />
       <Contact />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Clock, Menu, X } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo_removedBG.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,13 +36,13 @@ export function Header() {
               {/* <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A²</span>
               </div> */}
-              <img src={logo} alt="logo" className=' ml-4 w-28 h-20' />
-              <div>
+              <img src={logo} alt="logo" className=' ml-8 w-36 h-20' />
+              {/* <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
                   ASquare
                 </h1>
                 <p className="text-xs text-gray-600">Multispeciality Hospital</p>
-              </div>
+              </div> */}
             </Link>
 
             <div className="hidden lg:flex text-sm items-center gap-5">
@@ -67,7 +67,7 @@ export function Header() {
               <Link to="/blog" className="text-gray-700 hover:text-[#0077B6] font-medium transition">
                 Blog
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-[#0077B6] font-medium transition">
+              <Link to="/contact" className="text-gray-700 hover:text-[#0077B6] font-medium transition mr-28">
                 Contact
               </Link>
               <a

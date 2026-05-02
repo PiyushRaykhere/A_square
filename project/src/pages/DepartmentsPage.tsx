@@ -1,7 +1,7 @@
 const departments = [
   {
     name: 'Obstetrics & Gynaecology',
-    image: 'https://png.pngtree.com/thumb_back/fh260/background/20251207/pngtree-medical-ultrasound-machines-with-fetal-images-on-screen-technology-equipment-image_20766118.webp',
+    image: 'https://static.businessworld.in/what-is-ivf_20240726194110_ogImage_41.jpg',
     content: 'Our Obstetrics & Gynaecology department is led by experienced specialists dedicated to women\'s health at every stage of life. We provide comprehensive maternity care from pre-natal consultations through safe delivery and post-natal recovery. Our unit is equipped with a fully functional labour room, NICU support, and advanced fetal monitoring systems. We manage high-risk pregnancies with utmost care and clinical precision. Gynaecological concerns including PCOS, endometriosis, and menstrual disorders are handled with sensitivity and modern treatment protocols. We are committed to ensuring safe motherhood and healthy outcomes for both mother and child.',
   },
   {
@@ -11,7 +11,7 @@ const departments = [
   },
   {
     name: 'Surgery',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://dinbandhuhospital.com/assets/img/department-inner/general-surgery-department/general-surgery-department-01.jpg',
     content: 'A Square Hospital\'s Surgery department is equipped with modern modular operation theatres designed to support a wide range of surgical procedures. Our general surgeons are skilled in both elective and emergency surgeries including appendectomies, hernia repairs, gallbladder removals, and abdominal procedures. Laparoscopic and minimally invasive techniques are employed wherever applicable to reduce recovery time and post-operative discomfort. Pre-operative and post-operative care is supervised by a dedicated nursing team. We maintain strict infection control and sterile protocols across all surgical suites. Patient safety and surgical precision are our foremost priorities.',
   },
   {
@@ -21,12 +21,12 @@ const departments = [
   },
   {
     name: 'Pediatrics',
-    image: 'https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWeyuB1hQ9EytZYg5sFTBrKEcsXOhIz8RHg&s',
     content: 'The Pediatrics department at A Square Hospital provides specialized medical care for infants, children, and adolescents. Our pediatricians are trained to address the unique health needs of young patients with warmth and expertise. We offer newborn care, vaccination programs, nutritional counseling, and management of childhood illnesses including respiratory infections, fever, and gastrointestinal conditions. Our NICU is equipped to handle premature births and critically ill newborns. We place great importance on developmental monitoring and parental guidance. A child-friendly environment ensures that young patients feel comfortable and safe during their visit.',
   },
   {
     name: 'Anesthesia',
-    image: 'https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://drpksahahospital.com/wp-content/uploads/2022/06/OT-6-1-1-1024x683.jpg',
     content: 'The Department of Anesthesia plays a vital role in supporting all surgical and procedural interventions at A Square Hospital. Our qualified anesthesiologists provide safe and effective anesthesia care for a wide variety of operations, from routine procedures to complex emergency surgeries. Pre-anesthetic assessments are conducted thoroughly to evaluate patient fitness and minimize risks. We utilize modern anesthetic agents and monitoring equipment to ensure patient comfort and safety throughout every procedure. Pain management services extend beyond the operating theatre to include post-operative pain control. Our team is available round the clock to support emergency surgical cases.',
   },
 ];

@@ -139,7 +139,7 @@ export function HealthPackages() {
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                   }`}
                 >
-                  Book Now
+                  Buy Now
                 </a>
               </div>
             </div>

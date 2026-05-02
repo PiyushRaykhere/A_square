@@ -5,7 +5,6 @@ import { departmentsData, doctorsData, Doctor } from '../data/staticData';
 export function AppointmentForm() {
   const departments = departmentsData;
   const doctors = doctorsData;
-  const [filteredDoctors, setFilteredDoctors] = useState<Doctor[]>([]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -16,21 +15,7 @@ export function AppointmentForm() {
     department_id: '',
     doctor_id: '',
     appointment_date: '',
-    appointment_time: '',
-    reason: '',
   });
-
-  useEffect(() => {
-    if (formData.department_id) {
-      const filtered = doctors.filter(d => d.department_id === formData.department_id);
-      setFilteredDoctors(filtered);
-      if (!filtered.find(d => d.id === formData.doctor_id)) {
-        setFormData(prev => ({ ...prev, doctor_id: '' }));
-      }
-    } else {
-      setFilteredDoctors([]);
-    }
-  }, [formData.department_id, doctors]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,12 +23,12 @@ export function AppointmentForm() {
 
     const doctor = doctors.find(d => d.id === formData.doctor_id);
     const dept = departments.find(d => d.id === formData.department_id);
-    
-    const phoneNumber = '917312345678';
-    const message = `Hello ASquare Hospital,\n\nI would like to book an appointment:\n👨‍⚕️ *Doctor:* ${doctor?.name || ''}\n🏥 *Department:* ${dept?.name || ''}\n📅 *Date:* ${formData.appointment_date}\n⏰ *Time:* ${formData.appointment_time}\n\n*Patient Details:* \n👤 *Name:* ${formData.patient_name}\n📱 *Phone:* ${formData.patient_phone}\n✉️ *Email:* ${formData.patient_email}\n📝 *Reason:* ${formData.reason || 'N/A'}\n\nPlease confirm my booking.`;
+
+    const phoneNumber = '919827973991';
+    const message = `Hello ASquare Hospital,\n\nI would like to book an appointment:\n👨‍⚕️ *Doctor:* ${doctor?.name || ''}\n🏥 *Department:* ${dept?.name || ''}\n📅 *Date:* ${formData.appointment_date}\n\n*Patient Details:* \n👤 *Name:* ${formData.patient_name}\n📱 *Phone:* ${formData.patient_phone}\n✉️ *Email:* ${formData.patient_email}\n\nPlease confirm my booking.`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
+
     // Simulate loading for better UX before redirecting
     setTimeout(() => {
       window.open(whatsappUrl, '_blank');
@@ -57,8 +42,6 @@ export function AppointmentForm() {
         department_id: '',
         doctor_id: '',
         appointment_date: '',
-        appointment_time: '',
-        reason: '',
       });
 
       setTimeout(() => setSuccess(false), 5000);
@@ -145,13 +128,12 @@ export function AppointmentForm() {
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Department *
+                Department
               </label>
               <select
                 name="department_id"
                 value={formData.department_id}
                 onChange={handleChange}
-                required
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition"
               >
                 <option value="">Select Department</option>
@@ -172,13 +154,12 @@ export function AppointmentForm() {
                 value={formData.doctor_id}
                 onChange={handleChange}
                 required
-                disabled={!formData.department_id}
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition"
               >
                 <option value="">Select Doctor</option>
-                {filteredDoctors.map(doc => (
+                {doctors.map(doc => (
                   <option key={doc.id} value={doc.id}>
-                    {doc.name} - ₹{doc.consultation_fee}
+                    {doc.name}
                   </option>
                 ))}
               </select>
@@ -198,50 +179,13 @@ export function AppointmentForm() {
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition"
               />
             </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Preferred Time *
-              </label>
-              <select
-                name="appointment_time"
-                value={formData.appointment_time}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition"
-              >
-                <option value="">Select Time</option>
-                <option value="09:00 AM">09:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-              </select>
-            </div>
-
-            <div className="md:col-span-2">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Reason for Visit
-              </label>
-              <textarea
-                name="reason"
-                value={formData.reason}
-                onChange={handleChange}
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 outline-none transition resize-none"
-                placeholder="Briefly describe your symptoms or reason for consultation"
-              />
-            </div>
           </div>
 
           <div className="mt-8">
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-50 mx-auto bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
               {loading ? (
                 'Booking...'

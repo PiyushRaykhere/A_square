@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Heart } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo_removedBG.png';
 
 
 export function Footer() {
@@ -9,16 +9,17 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A²</span>
-              </div>
-              <div>
+              </div> */}
+              <img src={logo} alt="logo" className=' ml-12 w-36 h-20' />
+              {/* <div>
                 <h3 className="text-2xl font-bold">ASquare</h3>
                 <p className="text-sm text-gray-400">Multispeciality Hospital</p>
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-400 leading-relaxed">
-              ASquare Hospital — delivering world-class healthcare in Odisha with compassion, excellence, and innovation.
+              A Square Hospital — delivering world-class healthcare in Odisha with compassion, excellence, and innovation.
             </p>
           </div>
 
@@ -99,10 +100,10 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © 2026 ASquare Multispeciality Hospital. All rights reserved.
+              © 2026 A Square Multispeciality Hospital. All rights reserved.
             </p>
             <p className="flex items-center gap-2 text-gray-400 text-sm">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for better healthcare
+              Made by UDM Techno for better healthcare
             </p>
           </div>
         </div>
