@@ -45,7 +45,7 @@ export function Statistics() {
       className="py-16 bg-gradient-to-r from-[#0077B6] to-[#00B894]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -62,7 +62,7 @@ export function Statistics() {
                   start={start}
                 />
 
-                <div className="text-white/90 font-medium text-lg">
+                <div className="text-white/90 font-medium text-sm sm:text-lg">
                   {stat.label}
                 </div>
               </div>
@@ -107,7 +107,7 @@ function Counter({ target, suffix = "", start }: CounterProps) {
   }, [start, target]);
 
   return (
-    <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
       {count.toLocaleString()}
       {suffix}
     </div>

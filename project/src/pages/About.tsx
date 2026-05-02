@@ -31,14 +31,14 @@ const galleryImages = [
 
 export function About() {
   return (
-    <div className="pt-36 pb-20 bg-white">
+    <div className="pt-28 sm:pt-36 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Hero */}
-        <div className="flex flex-col md:flex-row gap-12 items-center mb-24">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-center mb-12 sm:mb-24">
           <div className="w-full md:w-1/2">
             <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
               <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">A Square</span> Hospital
             </h1>
             <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-4" />
@@ -60,7 +60,7 @@ export function About() {
         </div>
 
         {/* director section */}
-        <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-start mb-12 sm:mb-24">
           <div className="w-full md:w-[340px] flex-shrink-0">
             <div className="overflow-hidden rounded-2xl shadow-xl bg-gray-100">
               <img
@@ -72,7 +72,7 @@ export function About() {
           </div>
           <div className="flex-1 min-w-0">
             <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Meet Our Founder & Director</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
               Dr. <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Babita Ramani</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-5" />
@@ -95,8 +95,8 @@ export function About() {
 
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mb-24">
-          <div className="bg-blue-50 rounded-2xl p-10 flex flex-col gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-24">
+          <div className="bg-blue-50 rounded-2xl p-6 sm:p-10 flex flex-col gap-4">
             <div className="w-12 h-12 bg-[#0077B6] rounded-xl flex items-center justify-center text-white text-xl font-bold">M</div>
             <h2 className="text-2xl font-bold text-gray-800">Our Mission</h2>
             <div className="w-10 h-1 bg-[#0077B6] rounded" />
@@ -104,7 +104,7 @@ export function About() {
               To provide accessible, high-quality healthcare that improves the lives of our patients and the community we serve. We are committed to delivering compassionate, evidence-based medical care with the latest technology, ensuring every patient receives safe, timely, and effective treatment regardless of their background or circumstance.
             </p>
           </div>
-          <div className="bg-green-50 rounded-2xl p-10 flex flex-col gap-4">
+          <div className="bg-green-50 rounded-2xl p-6 sm:p-10 flex flex-col gap-4">
             <div className="w-12 h-12 bg-[#00B894] rounded-xl flex items-center justify-center text-white text-xl font-bold">V</div>
             <h2 className="text-2xl font-bold text-gray-800">Our Vision</h2>
             <div className="w-10 h-1 bg-[#00B894] rounded" />
@@ -122,7 +122,7 @@ export function About() {
             </h2>
           </div>
           <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-12 mx-auto" />
-          <div className="bg-blue-50 rounded-2xl p-10 mb-12 flex flex-col gap-4">
+          <div className="bg-blue-50 rounded-2xl p-6 sm:p-10 mb-12 flex flex-col gap-4">
             <p className="text-gray-600 leading-relaxed">A Square Hospital, Jharsuguda was established in March 2025 with a vision to provide trusted, affordable, and advanced healthcare services to the people of Jharsuguda and nearby communities. Since its beginning, our mission has been to deliver compassionate treatment, modern medical care, and patient-focused services under one roof.</p>
             <p className="text-gray-600 leading-relaxed">From the day it opened, A Square Hospital has continuously worked toward improving healthcare standards by bringing experienced doctors, advanced medical technology, and quality treatment facilities closer to the community. The hospital is committed to earning the trust of families through ethical practice, successful patient care, and dedication to excellence.</p>
             <p className="text-gray-600 leading-relaxed">Today, A Square Hospital is growing as a center of healthcare excellence, serving every patient with care, dignity, and professionalism while continuing the journey toward a healthier tomorrow.</p>
@@ -131,7 +131,7 @@ export function About() {
         </div>
 
         {/* Photo Strip */}
-        <h1 className='text-center text-4xl font-bold mb-4 '>Image <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Gallery</span></h1>
+        <h1 className='text-center text-3xl sm:text-4xl font-bold mb-4'>Image <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Gallery</span></h1>
         <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-10 mx-auto" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((img, index) => (

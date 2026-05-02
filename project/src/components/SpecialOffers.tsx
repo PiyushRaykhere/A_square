@@ -42,19 +42,19 @@ export function SpecialOffers() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Exclusive Benefits
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
             Special Offers &{' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
               Benefits
             </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mx-auto mb-4" />
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             Trusted healthcare solutions designed for every stage of life.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-14">
           {offers.map((offer) => {
             const Icon = offer.icon;
             return (
@@ -76,8 +76,8 @@ export function SpecialOffers() {
           })}
         </div>
 
-  <div className="mt-1 mb-18 flex justify-center px-4"> 
-        <div className="relative max-w-4xl w-full p-8 md:p-12 rounded-3xl bg-white border border-blue-50 shadow-[0_9px_50px_rgb(0,0,0,0.04)] overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,119,182,0.12)] hover:-translate-y-1"> 
+  <div className="mt-1 mb-10 sm:mb-18 flex justify-center px-4">
+        <div className="relative max-w-4xl w-full p-6 sm:p-8 md:p-12 rounded-3xl bg-white border border-blue-50 shadow-[0_9px_50px_rgb(0,0,0,0.04)] overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(0,119,182,0.12)] hover:-translate-y-1">
           {/* Background Glow Effect */} 
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out pointer-events-none">
             <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#0077B6]/15 rounded-full blur-3xl"></div> 
@@ -88,7 +88,7 @@ export function SpecialOffers() {
            
             
             {/* Main Text */} 
-            <p className="text-xl md:text-3xl font-medium leading-relaxed text-gray-700">
+            <p className="text-base sm:text-xl md:text-3xl font-medium leading-relaxed text-gray-700">
                At <span className="font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent px-2"> A Square Hospital, Jharsuguda,</span> we are dedicated to delivering trusted healthcare solutions for every stage of life  
                <br className="hidden md:block" />
                

@@ -52,7 +52,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative pt-20 h-[600px] lg:h-[750px] overflow-hidden">
+    <section id="home" className="relative pt-20 h-[480px] sm:h-[600px] lg:h-[750px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -63,33 +63,33 @@ export function Hero() {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-fill bg-gray-900"
+            className="w-full h-full object-cover bg-gray-900"
           />
           <div className="absolute inset-0 z-20 flex items-center">
-            <div className="max-w-7xl mx-auto px-18 sm:px-6 lg:px-8 w-full">
-              <div className="max-w-2xl ml-8">
-                <p className="text-xl sm:text-xl text-white/90 mb-2">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="max-w-2xl sm:ml-8">
+                <p className="text-sm sm:text-xl text-white/90 mb-1 sm:mb-2">
                   {slide.subtitle1}
                 </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-white mb-2 sm:mb-4 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-xl sm:text-2xl text-white/90 mb-8">
+                <p className="text-sm sm:text-2xl text-white/90 mb-4 sm:mb-8">
                   {slide.subtitle}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                   <a
                     href="#appointment"
-                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-5 py-3 sm:px-8 sm:py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-sm sm:text-base"
                   >
-                    <Calendar className="w-5 h-5" />
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                     Book Appointment
                   </a>
                   <a
                     href="tel:+917312345678"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-[#0077B6] px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold"
+                    className="inline-flex items-center justify-center gap-2 bg-white text-[#0077B6] px-5 py-3 sm:px-8 sm:py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-sm sm:text-base"
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                     Emergency Call
                   </a>
                 </div>

@@ -59,15 +59,15 @@ export function Departments() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Our Specialities
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Comprehensive <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Healthcare</span> Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             We offer a wide range of medical specialities with experienced doctors and modern equipment
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {specialities.map((dept) => {
             const IconComponent = dept.icon;
             return (

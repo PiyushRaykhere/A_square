@@ -56,20 +56,20 @@ const services = [
 
 export function ServicesPage() {
   return (
-    <div className="pt-36 pb-20 bg-gray-50">
+    <div className="pt-28 sm:pt-36 pb-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">What We Offer</span>
-          <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Our <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Services</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             At A Square Hospital, Jharsuguda, we provide a complete range of healthcare services combining expert doctors, advanced technology, and compassionate care for every patient.
           </p>
         </div>
 
-        <div className="bg-blue-50 rounded-2xl p-8 md:p-10 mb-16 max-w-4xl mx-auto">
+        <div className="bg-blue-50 rounded-2xl p-5 sm:p-8 md:p-10 mb-10 sm:mb-16 max-w-4xl mx-auto">
           <p className="text-gray-700 leading-relaxed mb-4">
             At A Square Hospital, Jharsuguda, we provide a complete range of healthcare services designed to meet the medical needs of every family. Our hospital combines expert doctors, advanced technology, and compassionate care to ensure the best treatment experience for all patients.
           </p>
@@ -78,24 +78,24 @@ export function ServicesPage() {
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-12 sm:space-y-20">
           {services.map((service, index) => (
             <div
               key={service.name}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 sm:gap-10 items-center`}
             >
               <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg">
                 <img
                   src={service.image}
                   alt={service.name}
-                  className="w-full h-[370px] object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 sm:h-[370px] object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="w-full md:w-1/2">
                 <div className="inline-block bg-green-50 text-[#00B894] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
                   Service
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{service.name}</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">{service.name}</h2>
                 <div className="w-12 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-5" />
                 <p className="text-gray-600 leading-relaxed text-base">{service.content}</p>
               </div>

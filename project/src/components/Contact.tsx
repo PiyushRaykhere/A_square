@@ -8,10 +8,10 @@ export function Contact() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Get In Touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Visit <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Our Hospital</span>
           </h2>
-          <p className="text-md text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-md text-gray-600 max-w-3xl mx-auto">
             We're here to help. Reach out to us for appointments, emergencies, or general inquiries
           </p>
         </div>
@@ -85,7 +85,7 @@ export function Contact() {
 
           </div>
 
-          <div className="bg-white rounded-xl shadow-md overflow-hidden h-full min-h-[420px]">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden h-full min-h-[300px] sm:min-h-[420px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.127991360071!2d84.02623607404391!3d21.92963047995476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a20e512677f90f1%3A0xe422d023fa28bf4d!2sA%20Square%20Hospital!5e0!3m2!1sen!2sin!4v1777446876389!5m2!1sen!2sin"
               width="100%"

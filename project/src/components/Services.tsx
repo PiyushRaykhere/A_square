@@ -47,10 +47,10 @@ export function Services() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Patient Services
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Comprehensive <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Care Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             We provide a full range of healthcare services designed for your convenience and well-being
           </p>
         </div>
@@ -77,16 +77,16 @@ export function Services() {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded-3xl p-12 text-white text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="mt-16 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded-3xl p-6 sm:p-12 text-white text-center">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Need Emergency Medical Care?
           </h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-base sm:text-xl mb-5 sm:mb-8 opacity-90">
             Our emergency department is open 24 hours a day, 7 days a week
           </p>
           <a
             href="tel:+917312345678"
-            className="inline-block bg-white text-[#0077B6] px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105"
+            className="inline-block bg-white text-[#0077B6] px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:shadow-2xl transition transform hover:scale-105"
           >
             Call Emergency: +91 731-2345-678
           </a>

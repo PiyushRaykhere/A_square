@@ -33,36 +33,36 @@ const departments = [
 
 export function DepartmentsPage() {
   return (
-    <div className="pt-36 pb-20 bg-white">
+    <div className="pt-28 sm:pt-36 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">Our Specialities</span>
-          <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Our <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Departments</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive medical specialities with experienced doctors and modern facilities to serve all your healthcare needs.
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-12 sm:space-y-20">
           {departments.map((dept, index) => (
             <div
               key={dept.name}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 sm:gap-10 items-center`}
             >
               <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg">
                 <img
                   src={dept.image}
                   alt={dept.name}
-                  className="w-full h-[370px] object-fit  hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 sm:h-[370px] object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="w-full md:w-1/2">
                 <div className="inline-block bg-blue-50 text-[#0077B6] text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
                   Department
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{dept.name}</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4">{dept.name}</h2>
                 <div className="w-12 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mb-5" />
                 <p className="text-gray-600 leading-relaxed text-base">{dept.content}</p>
               </div>

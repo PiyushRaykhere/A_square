@@ -64,10 +64,10 @@ export function AppointmentForm() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Easy Booking
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Book Your <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Appointment</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-xl text-gray-600">
             Fill out the form below and we'll confirm your appointment shortly
           </p>
         </div>
@@ -78,8 +78,8 @@ export function AppointmentForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 shadow-xl">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-4 sm:p-8 shadow-xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
                 Full Name *
@@ -185,7 +185,7 @@ export function AppointmentForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-50 mx-auto bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-full sm:w-auto mx-auto bg-gradient-to-r from-[#0077B6] to-[#00B894] text-white px-8 py-4 rounded-lg hover:shadow-2xl transition transform hover:scale-105 font-semibold text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >
               {loading ? (
                 'Booking...'

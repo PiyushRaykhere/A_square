@@ -49,15 +49,15 @@ export function Doctors({ limit, showViewAll }: DoctorsProps) {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Our Medical Team
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Meet Our <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Expert Doctors</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Highly qualified and experienced medical professionals dedicated to your health
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {doctors.map((doctor) => (
             <div
               key={doctor.id}

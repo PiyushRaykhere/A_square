@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               {/* <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A²</span>
               </div> */}
-              <img src={logo} alt="logo" className=' ml-12 w-36 h-20' />
+              <img src={logo} alt="logo" className='w-28 sm:w-36 h-16 sm:h-20' />
               {/* <div>
                 <h3 className="text-2xl font-bold">ASquare</h3>
                 <p className="text-sm text-gray-400">Multispeciality Hospital</p>
