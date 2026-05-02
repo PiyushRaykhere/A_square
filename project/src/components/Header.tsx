@@ -36,7 +36,7 @@ export function Header() {
               {/* <div className="w-12 h-12 bg-gradient-to-br from-[#0077B6] to-[#00B894] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A²</span>
               </div> */}
-              <img src={logo} alt="logo" className='w-28 sm:w-36 h-16 sm:h-20' />
+              <img src={logo} alt="logo" className='w-28 sm:w-36 h-16 sm:h-20 ml-12' />
               {/* <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
                   ASquare
