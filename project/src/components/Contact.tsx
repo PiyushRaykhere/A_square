@@ -8,11 +8,11 @@ export function Contact() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mt-3 mb-4">
             Visit <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">Our Hospital</span>
           </h2>
           <p className="text-sm sm:text-md text-gray-600 max-w-3xl mx-auto">
-            We're here to help. Reach out to us for appointments, emergencies, or general inquiries
+            We're here to help. Reach out to us for appointments,<br /> emergencies, or general inquiries
           </p>
         </div>
 

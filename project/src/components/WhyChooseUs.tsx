@@ -41,14 +41,14 @@ export function WhyChooseUs() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mt-3 mb-4">
             Why Patients Trust{' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
               A Square
             </span> {''}Hospital
           </h2>
-          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            At A_Square Hospital, Jharsuguda, your health is our priority, and your trust is our greatest strength
+          <p className="text-base sm:text-md text-gray-600 max-w-3xl mx-auto">
+            At A_Square Hospital, Jharsuguda, your health is our priority, and your trust is <br /> our greatest strength
           </p>
         </div>
 

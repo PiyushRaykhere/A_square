@@ -68,7 +68,7 @@ export function HealthPackages() {
             Health Packages
           </span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mt-3 mb-4">
             Affordable{' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
               Health Checkup
@@ -76,7 +76,7 @@ export function HealthPackages() {
             Packages
           </h2>
 
-          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-md text-gray-600 max-w-3xl mx-auto">
             Preventive healthcare packages designed for different age groups and health needs
           </p>
         </div>

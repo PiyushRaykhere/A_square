@@ -42,14 +42,14 @@ export function SpecialOffers() {
           <span className="text-[#00B894] font-semibold text-sm uppercase tracking-wider">
             Exclusive Benefits
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 text-gray-800">
-            Special Offers &{' '}
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">
+            Special {' '}
             <span className="bg-gradient-to-r from-[#0077B6] to-[#00B894] bg-clip-text text-transparent">
-              Benefits
+              Offers & Benefits 
             </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#0077B6] to-[#00B894] rounded mx-auto mb-4" />
-          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-md">
             Trusted healthcare solutions designed for every stage of life.
           </p>
         </div>
